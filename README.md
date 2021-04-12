@@ -1,14 +1,13 @@
-README.md
-Game - Name Pending
+# Taxi Racer
 
-NOTE
+## Note
     This assignment called for window resizing to affect the game so the elements rearrange. However, this would change the overall
     game mechanics. For instance, if the user expanded vertically, the loop road function would have to adapt but that would allow
     the player to see more and more cars, possibly making it too easy. Therefore, I locked the window size as I feel like that
     supports the game mechanics I implemented as of now.
 
-PROGRAM DESCRIPTION
-    Classes: (please make sure all are present to properly compile)
+## Program Description
+    **Classes:** (please make sure all are present to properly compile)
         Game.java
         Controls.java
         Canvas.java
@@ -24,7 +23,7 @@ PROGRAM DESCRIPTION
         Person.java
         TListener.java
 
-    "images" Files:(please make sure all are present to properly run)
+    **"images" Files:** (please make sure all are present to properly run)
         alert.gif
         car.gif
         carb.gif
@@ -44,7 +43,7 @@ PROGRAM DESCRIPTION
         road.png
         speed.png
 
-    Objective:
+    **Objective:**
         The goal of this game is to navigate a car through traffic (other cars) and pick up and drop off customers
         without crashing into other cars. This becomes a challenge while trying to navigate between multiple cars.
         The car is capable of honking, which sends the car in front at a faster speed until you have overtaken them
@@ -54,7 +53,7 @@ PROGRAM DESCRIPTION
         last but not least, the car can crash into other cars, resulting in the game to end. Points are awarded for
         distance covered, and 50 bonus points are awarded for successfully dropping off a customer.
 
-    Description:
+    **Description:**
         The points system and overall objective may be modified. However, the rest of the code is implemented thoroughly
         and involves many classes which work together. The Canvas class houses the main game with elements drawn in on
         a game tick which runs every 35 milliseconds. Additionally, the Controls class allows for controls on the right.
@@ -64,12 +63,12 @@ PROGRAM DESCRIPTION
         based on the game mechanics, allowing for only certain movements and for the customer to be placed appropriately. This
         involves several conditionals and a lot of minute details.
 
-SPECIAL FEATURES
+## Special Features
     This game utilizes a lot of randomness, but also guarantees that the game is possible. This was a challenge to implement
     because of the amount of possibilities for something to not be calculated, allowing for "a cheat" and the game to not
     work correctly. This is why the Canvas class is very long and contains several if statements.
 
-RECENT ADDITIONS
+## Recent Additions
     In this patch, a Method class was introduced that stores all the major widgets and objects for the Canvas, as well as its Graphics object to paint. All the game mechanics are in this Method class instead of Canvas. Canvas simply paints by calling a function in
     the Model class and passing in the Graphics object. This allows for a more organized structure for data management.
 
@@ -77,13 +76,13 @@ RECENT ADDITIONS
     specific variables that allow for the visual effects. This involved adding many getters and setters and restructuring the code in
     Model to call them to retrieve information rather than using the prior unorganized variables.
 
-HOW TO COMPILE
+## How to Compile
     Make sure there is a folder "images" in the same directory as the game and that all the image files are there
     IN COMMAND PROMPT:
         javac Game.java
         java Game
 
-INHERITANCE HIERARCHY
+## Inheritance Hierarchy
 Game -> JFrame
 Controls -> JPanel
 Canvas -> JPanel
@@ -100,7 +99,7 @@ Toggle -> JToggleButton
 TListener
 Model
 
-AGGREGATION HIERARCHY
+## Aggregation Hierarchy
 Game
 --> Controls
     --> Speed JLabel
