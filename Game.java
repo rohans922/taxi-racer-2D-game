@@ -35,15 +35,10 @@ public class Game extends JFrame {
     	setLayout (new BorderLayout());
 
         // these two elements make up the main JFrame
-        System.out.println("1");
         model = new Model ();
-        System.out.println("2");
         canvas = new Canvas (model);
-        System.out.println("3");
         model.pass(canvas);
-        System.out.println("4");
         controls = new Controls(model, canvas);
-        System.out.println("5");
 
         // this is the listener that allows for a timer to run, creating a game tick
         TListener listener = new TListener(model, controls, canvas);

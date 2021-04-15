@@ -29,8 +29,6 @@ public class Alert extends ImageIcon {
         setImage(img);
         this.x = x;
         this.y = y;
-        System.out.println(x);
-        System.out.println(y);
         this.show = show;
     }
 

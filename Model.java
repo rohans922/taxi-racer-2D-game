@@ -339,7 +339,6 @@ public class Model {
 
     // manages the limitations on various values and constrains them
     public void manage_limits() {
-        // System.out.println(meter);
         if (meter == 120)
             maxed = true;
         if (speed == MAX_SPEED) {
@@ -591,20 +590,17 @@ public class Model {
     // called to either reset the game completely (force == true) or when a car moves off screen (force == false)
     public void reset(boolean force) {
         if (r_opposing.get_y() < -500) {
-            System.out.println("resetting right");
             r_opposing.set_y(-200);
             honk_r = 1.0;
             acright = 1;
         }
         if (l_opposing.get_y() < -500) {
-            System.out.println("resetting left");
             l_opposing.set_y(-470);
             honk_l = 1.0;
             acleft = 1;
         }
         if (force) {
             // sets all default values back
-            System.out.println("resetting all");
             person.set_pose("wave");
             score = 0;
             score_str = "SCORE: " + String.valueOf(score);
